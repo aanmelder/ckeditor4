@@ -63,8 +63,7 @@ Comments in this file will give more details about each of the above blocks.
 /* The dialog title. */
 .cke_dialog_title
 {
-	font-weight: bold;
-	font-size: 12px;
+	font: 700 133% Verdana,Geneva,sans-serif;
 	cursor: move;
 	position: relative;
 
@@ -73,7 +72,7 @@ Comments in this file will give more details about each of the above blocks.
 	border-bottom: 1px solid #d1d1d1;
 	padding: 12px 19px 12px 12px;
 
-	background: #f8f8f8;
+	background: #fff;
 	letter-spacing: 0.3px;
 }
 
@@ -212,7 +211,7 @@ The .cke_dialog_tab_selected class is appended to the active tab.
 	margin: 9px 0 0;
 	position: absolute;
 	z-index: 2;
-	left: 11px;
+	left: 0;
 }
 
 .cke_rtl .cke_dialog_tabs
@@ -224,6 +223,7 @@ The .cke_dialog_tab_selected class is appended to the active tab.
 /* A single tab (an <a> element). */
 a.cke_dialog_tab
 {
+	font-weight: 700;
 	height: 25px;
 	padding: 4px 8px;
 	display: inline-block;
@@ -231,38 +231,31 @@ a.cke_dialog_tab
 	line-height: 26px;
 	outline: none;
 	color: #484848;
-	border: 1px solid #d1d1d1;
+	border-bottom: 1px solid #d1d1d1;
 
-	border-radius: 3px 3px 0 0;
-
-	background: #f8f8f8;
+	background: #fff;
 	min-width: 90px;
 	text-align: center;
 
-	margin-left: -1px; /* Use negative margin to create 1px border between tabs. */
 	letter-spacing: 0.3px;
 }
 
 /* A hover state of a regular inactive tab. */
-a.cke_dialog_tab:hover
+a.cke_dialog_tab:hover, a.cke_dialog_tab:focus
 {
-	background-color: #fff;
-}
-
-a.cke_dialog_tab:focus
-{
-	border: 2px solid #139ff7;
-	border-bottom-color: #d1d1d1;
-	padding: 3px 7px;
-	position: relative; /* Puts hovered tabs on top so both left and right borders are visible.*/
-	z-index: 1;
+	background: #12acb8;
+	color: #fff;
+	border-bottom-color: #12acb8;
+	cursor: default;
+	filter: none;
 }
 
 /* Single selected tab. */
 a.cke_dialog_tab_selected
 {
-	background: #fff;
-	border-bottom-color: #fff;
+	background: #12acb8;
+	color: #fff;
+	border-bottom-color: #12acb8;
 	cursor: default;
 	filter: none;
 }
@@ -271,7 +264,7 @@ a.cke_dialog_tab_selected
 a.cke_dialog_tab_selected:hover,
 a.cke_dialog_tab_selected:focus
 {
-	border-bottom-color: #fff;
+	background: #0d7880;
 }
 
 .cke_hc a.cke_dialog_tab:hover,
@@ -308,16 +301,15 @@ a.cke_dialog_close_button
 	background-image: url(images/close.png);
 	background-repeat: no-repeat;
 	background-position: 50%;
+	background-color: #12acb8;
+	background-size: 45px;
 	position: absolute;
 	cursor: pointer;
 	text-align: center;
-	height: 16px;
-	width: 16px;
-	top: 11px;
-	z-index: 5;
-
-	opacity: 0.7;
-	filter: alpha(opacity = 70);
+	height: 45px;
+	width: 45px;
+	top: 0;
+	z-index: 0;
 }
 
 .cke_rtl .cke_dialog_close_button
@@ -327,7 +319,7 @@ a.cke_dialog_close_button
 
 .cke_ltr .cke_dialog_close_button
 {
-	right: 12px;
+	right: 0;
 }
 
 .cke_hc a.cke_dialog_close_button {
@@ -338,12 +330,6 @@ a.cke_dialog_close_button
 {
 	background-image: url(images/hidpi/close.png);
 	background-size: 16px;
-}
-
-a.cke_dialog_close_button:hover
-{
-	opacity: 1;
-	filter: alpha(opacity = 100);
 }
 
 a.cke_dialog_close_button span
@@ -657,9 +643,9 @@ a.cke_dialog_ui_button:active
 /* Special class appended to the Ok button. */
 a.cke_dialog_ui_button_ok
 {
-	color: #fff;
-	background: #09863E;
-	border: 1px solid #09863E;
+	border: 1px solid #12acb8;
+	color: #f5f5f5;
+	background-color: #12acb8;
 }
 
 .cke_hc a.cke_dialog_ui_button {
@@ -667,10 +653,10 @@ a.cke_dialog_ui_button_ok
 }
 
 
-a.cke_dialog_ui_button_ok:hover
+a.cke_dialog_ui_button_ok:hover, a.cke_dialog_ui_button_ok:focus
 {
-	background: #53AA78;
-	border-color: #53AA78;
+	background-color: #0d818a;
+	border-color: #0d7880;
 }
 
 a.cke_dialog_ui_button_ok:focus
